@@ -1,0 +1,42 @@
+
+bt_alice(hawk,dove):
+   ( C(alice,hawk,<<>>X ua_geq_0) & ~C(alice,dove,<<>>X ua_geq_0) )
+ | ( C(alice,hawk,<<>>X ua_geq_1) & ~C(alice,dove,<<>>X ua_geq_1) )
+ | ( C(alice,hawk,<<>>X ua_geq_2) & ~C(alice,dove,<<>>X ua_geq_2) )
+ | ( C(alice,hawk,<<>>X ua_geq_3) & ~C(alice,dove,<<>>X ua_geq_3) )
+
+"( C(alice,hawk,<<>>X ua_geq_0) & ~C(alice,dove,<<>>X ua_geq_0) ) | ( C(alice,hawk,<<>>X ua_geq_1) & ~C(alice,dove,<<>>X ua_geq_1) ) | ( C(alice,hawk,<<>>X ua_geq_2) & ~C(alice,dove,<<>>X ua_geq_2) ) | ( C(alice,hawk,<<>>X ua_geq_3) & ~C(alice,dove,<<>>X ua_geq_3) )"
+
+
+bt_alice(dove,hawk):
+   ( C(alice,dove,<<>>X ua_geq_0) & ~C(alice,hawk,<<>>X ua_geq_0) )
+ | ( C(alice,dove,<<>>X ua_geq_1) & ~C(alice,hawk,<<>>X ua_geq_1) )
+ | ( C(alice,dove,<<>>X ua_geq_2) & ~C(alice,hawk,<<>>X ua_geq_2) )
+ | ( C(alice,dove,<<>>X ua_geq_3) & ~C(alice,hawk,<<>>X ua_geq_3) )
+
+"( C(alice,dove,<<>>X ua_geq_0) & ~C(alice,hawk,<<>>X ua_geq_0) ) | ( C(alice,dove,<<>>X ua_geq_1) & ~C(alice,hawk,<<>>X ua_geq_1) ) | ( C(alice,dove,<<>>X ua_geq_2) & ~C(alice,hawk,<<>>X ua_geq_2) ) | ( C(alice,dove,<<>>X ua_geq_3) & ~C(alice,hawk,<<>>X ua_geq_3) )"
+
+
+bt_bob(hawk,dove):
+   ( C(bob,hawk,<<>>X ub_geq_0) & ~C(bob,dove,<<>>X ub_geq_0) )
+ | ( C(bob,hawk,<<>>X ub_geq_1) & ~C(bob,dove,<<>>X ub_geq_1) )
+ | ( C(bob,hawk,<<>>X ub_geq_2) & ~C(bob,dove,<<>>X ub_geq_2) )
+ | ( C(bob,hawk,<<>>X ub_geq_3) & ~C(bob,dove,<<>>X ub_geq_3) )
+
+"( C(bob,hawk,<<>>X ub_geq_0) & ~C(bob,dove,<<>>X ub_geq_0) ) | ( C(bob,hawk,<<>>X ub_geq_1) & ~C(bob,dove,<<>>X ub_geq_1) ) | ( C(bob,hawk,<<>>X ub_geq_2) & ~C(bob,dove,<<>>X ub_geq_2) ) | ( C(bob,hawk,<<>>X ub_geq_3) & ~C(bob,dove,<<>>X ub_geq_3) )"
+
+
+bt_bob(dove,hawk):
+   ( C(bob,dove,<<>>X ub_geq_0) & ~C(bob,hawk,<<>>X ub_geq_0) )
+ | ( C(bob,dove,<<>>X ub_geq_1) & ~C(bob,hawk,<<>>X ub_geq_1) )
+ | ( C(bob,dove,<<>>X ub_geq_2) & ~C(bob,hawk,<<>>X ub_geq_2) )
+ | ( C(bob,dove,<<>>X ub_geq_3) & ~C(bob,hawk,<<>>X ub_geq_3) )
+
+"( C(bob,dove,<<>>X ub_geq_0) & ~C(bob,hawk,<<>>X ub_geq_0) ) | ( C(bob,dove,<<>>X ub_geq_1) & ~C(bob,hawk,<<>>X ub_geq_1) ) | ( C(bob,dove,<<>>X ub_geq_2) & ~C(bob,hawk,<<>>X ub_geq_2) ) | ( C(bob,dove,<<>>X ub_geq_3) & ~C(bob,hawk,<<>>X ub_geq_3) )"
+
+
+bt_alice(hawk,dove):
+Or (And (Commit "alice" "dove" (Next [] (Prop "ua_geq_0"))) (Not (Commit "alice" "hawk" (Next [] (Prop "ua_geq_0"))))) (Or (And (Commit "alice" "dove" (Next [] (Prop "ua_geq_1"))) (Not (Commit "alice" "hawk" (Next [] (Prop "ua_geq_1"))))) (Or (And (Commit "alice" "dove" (Next [] (Prop "ua_geq_2"))) (Not (Commit "alice" "hawk" (Next [] (Prop "ua_geq_2"))))) (And (Commit "alice" "dove" (Next [] (Prop "ua_geq_3"))) (Not (Commit "alice" "hawk" (Next [] (Prop "ua_geq_3")))))))
+
+
+
